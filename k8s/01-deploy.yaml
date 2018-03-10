@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nildemand
+  labels:
+    app: nildemand
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nildemand
+  template:
+    metadata:
+      labels:
+        app: nildemand
+    spec:
+      containers:
+      - name: nildemand
+        image: us.gcr.io/nildemand-197601/nildemand:latest
+        ports:
+        - containerPort: 8080
