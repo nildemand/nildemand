@@ -11,6 +11,6 @@ func index(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
-	http.HandleFunc("/", index)
+	http.HandleFunc("/demand", index)
 	log.Fatal(http.ListenAndServe(":8080", nil))
 }
